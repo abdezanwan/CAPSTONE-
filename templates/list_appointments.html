@@ -1,0 +1,12 @@
+<ul class="appointment-list">
+    {% for appointment in appointments %}
+        <li class="appointment-item">
+            <strong class="label">Date:</strong> {{ appointment.date }}
+            <strong class="label">Time:</strong> {{ appointment.time }}
+            <strong class="label">Status:</strong> {{ appointment.status }}
+            {% if appointment.status == 'Pending' %}
+                <a class="confirm-link" href="{{ url_for('confirm_appointment', appointment_id=appointment.id) }}">Confirm</a>
+            {% endif %}
+        </li>
+    {% endfor %}
+</ul>

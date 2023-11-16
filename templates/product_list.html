@@ -1,0 +1,93 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Zanoon Barber Shop</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <!-- Link Bootstrap CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.5.0/dist/css/bootstrap.min.css">
+    <!-- Add your custom styles for the slider here -->
+    <style>
+        .carousel-item img {
+            max-height: 400px;
+            width: 100%;
+        }
+
+        /* Custom CSS for the Services section */
+        .services-section {
+            background-color: #f8f8f8;
+            padding: 50px 0;
+        }
+        .service-list {
+            list-style-type: none;
+            padding: 0;
+            display: flex;
+            justify-content: center; /* Center the service cards horizontally */
+            flex-wrap: wrap;
+        }
+        /* Custom CSS for the footer */
+footer {
+    background-color: darkblue;
+    color: white;
+    padding: 20px; /* Increase padding to make the footer bigger */
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+}
+        .service-card {
+            width: 200px;
+            padding: 15px;
+            border: 2px solid #ddd;
+            margin: 10px; /* Add spacing around the cards */
+            text-align: center;
+        }
+
+        /* Custom CSS for the Login section */
+        .products-section {
+            text-align: center;
+            padding: 50px; /* Increase padding for better appearance */
+            border: 2px solid #ddd; /* Add a border */
+            border-radius: 20px;
+            box-shadow: 0 3px 7px rgba(0, 0, 0, 0.2);
+        }
+        .product-card {
+            height: 350px;
+           align-items: center;
+           padding-top: 10px;
+        }
+        .product-image {
+            max-width: 200px;
+            max-height: 250px;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Products section -->
+    <section class="products-section my-5"> <!-- Added margin to the top -->
+        <h2>Our Products:</h2>
+        <div class="row">
+            {% for product in products %}
+                <div class="col-md-4">
+                    <div class="card product-card">
+                        <img src="{{ product.Image }}" alt="{{ product.name }}" class="card-img-top product-image">
+                        <div class="card-body">
+                            <h5 class="card-title">{{ product.name }}</h5>
+                            <p class="card-text">Price: {{ product.Price }}</p>
+                        </div>
+                    </div>
+                </div>
+            {% endfor %}
+        </div>
+    </section>
+
+
+    <!-- Link Bootstrap JS and jQuery (optional) -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.5.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
+{% endblock %}

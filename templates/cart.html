@@ -1,0 +1,14 @@
+{% extends 'base.html' %}
+
+{% block content %}
+    <link rel="stylesheet" href="{{ url_for('static', filename='cart.css') }}">
+    <h1>Shopping Cart</h1>
+    <ul>
+        {% for cart_item in cart_items %}
+            <li>
+                {{ cart_item.product.name }} - Quantity: {{ cart_item.quantity }} - Total: ${{ cart_item.quantity * cart_item.product.price }}
+            </li>
+        {% endfor %}
+    </ul>
+    <a href="{{ url_for('checkout') }}">Checkout</a>
+{% endblock %}

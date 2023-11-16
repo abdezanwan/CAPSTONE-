@@ -1,0 +1,575 @@
+/* CSS for base.html */
+/* Reset default margin and padding for all elements */
+* {
+    margin: 0;
+    padding: 0;
+}
+
+/* Apply a background color and set default font styles */
+body {
+    background-color: #1287ae;
+    font-family: Arial, sans-serif;
+}
+
+/* Style the header and navigation menu */
+header {
+    background-color: #333;
+    color: #fff;
+    padding: 10px;
+    display: flex; /* Add flex display for better alignment */
+    justify-content: center; /* Center the content horizontally */
+    align-items: center; /* Center the content vertically */
+}
+
+nav ul {
+    list-style: none;
+}
+
+nav ul li {
+    display: inline;
+    margin-right: 20px;
+}
+
+/* Style the navbar */
+.navbar {
+    background-color: #333; /* Darker background color */
+    height: 80px;
+    box-shadow: 0 12px 12px rgba(0, 0, 0, 0.3); /* Increase shadow */
+    display: flex; /* Display the navbar content as a flex container */
+    justify-content: space-between; /* Space items inside the navbar */
+    align-items: center; /* Center items vertically */
+    border-radius: 15px; /* Add rounded corners */
+    padding: 0 20px; /* Add padding to the navbar */
+}
+
+/* Make the text "Barber Shop" in the top of navbar white */
+.navbar .navbar-brand {
+    color: white; /* Set the text color to white */
+}
+
+/* Style the clickable links in the navigation menu */
+.navbar .nav-link {
+    color: #fff; /* White text color */
+    margin-right: 20px;
+    font-size: 16px; /* Adjust font size */
+}
+
+/* Center the main navigation links */
+.navbar .nav-links {
+    display: flex;
+    align-items: center;
+}
+
+/* Move the Hello, Logout, Login, Register links to the center */
+.navbar .user-links {
+    display: flex;
+    align-items: center;
+    margin-left: auto; /* Move the links to the right side */
+    font-size: 16px; /* Adjust font size */
+}
+
+/* Style the user links */
+.navbar .user-links a {
+    color: #fff;
+    text-decoration: none;
+    margin-right: 20px;
+}
+
+/* Center the main content */
+main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    min-height: 80vh; /* Adjust the minimum height as needed */
+}
+
+/* Styles for smaller screens */
+@media (max-width: 768px) {
+    /* Define styles for smaller screens */
+}
+
+/* Images styles */
+.spinning-image {
+    max-width: 50px; /* Adjust the image size */
+    margin-left: auto; /* Move the image to the right */
+    margin-right: 20px; /* Add space between the image and text */
+}
+
+
+/* Custom CSS for the footer */
+footer {
+    background-color: darkblue;
+    color: white;
+    padding: 20px; /* Increase padding to make the footer bigger */
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+}
+/* Custom styles for the ZANOON SHOP title */
+.shop-title {
+    font-size: 36px; /* Adjust the font size to make it bigger */
+    font-weight: bold; /* Add bold font weight for emphasis */
+    text-transform: uppercase; /* Uppercase text for a polite look */
+    letter-spacing: 2px; /* Add some letter spacing for better readability */
+    padding: 10px 0; /* Add some padding to separate it from the navbar */
+}
+
+/* Style for home */
+
+/* CSS for your home page */
+
+/* Additional section styles */
+.hero {
+    text-align: center;
+    position: relative;
+}
+
+.background-image {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    z-index: -1;
+}
+
+.moving-image {
+    position: absolute;
+    top: 0;
+    left: 0;
+    min-width: 100%;
+    min-height: 100%;
+    animation: moveBackground 30s linear infinite;
+}
+
+.content-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: #fff;
+    min-height: 100vh;
+}
+
+.text-container {
+    padding: 20px;
+    background-color: rgba(0, 0, 0, 0.5); /* Add a semi-transparent background */
+    border-radius: 10px; /* Round the corners of the text container */
+}
+
+/* Add your other section styles as needed */
+
+/* Keyframes for moving background image */
+@keyframes moveBackground {
+    0% {
+        transform: translateX(0%);
+    }
+    100% {
+        transform: translateX(100%);
+    }
+}
+
+
+
+/* Style the appointment list */
+.appointment-list {
+    list-style: none;
+    padding: 0;
+}
+
+/* Style individual appointment items */
+.appointment-item {
+    border: 1px solid #ccc;
+    padding: 10px;
+    margin: 10px 0;
+    border-radius: 10px;
+}
+
+/* Style labels within each appointment item */
+.label {
+    font-weight: bold;
+    margin-right: 10px;
+}
+
+/* Style the "Confirm" link */
+.confirm-link {
+    background-color: #007bff;
+    color: #fff;
+    padding: 5px 10px;
+    border-radius: 5px;
+    text-decoration: none;
+}
+
+.confirm-link:hover {
+    background-color: #0056b3;
+}
+
+
+
+/* CSS for login.html and registration.html */
+.login, .registration {
+    max-width: 600px; /* Increase the maximum width */
+    margin: 0 auto;
+    background-color: #fff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Make the shadow slightly stronger */
+    border-radius: 15px; /* Increase the border radius for rounded corners */
+    padding: 30px; /* Increase padding for more space */
+    text-align: center;
+}
+
+.login h2, .registration h2 {
+    font-size: 28px; /* Increase the font size for the heading */
+}
+
+.login .form-group, .registration .form-group {
+    margin: 15px 0; /* Add more spacing between form elements */
+    text-align: left;
+}
+
+.login label, .registration label {
+    display: block;
+    font-size: 18px; /* Increase font size for labels */
+}
+
+.login input, .registration input {
+    width: 100%;
+    padding: 12px; /* Increase padding for input fields */
+    margin-top: 10px;
+    border: 1px solid #ccc;
+    border-radius: 10px; /* Increase border radius for input fields */
+    font-size: 16px; /* Increase font size for input fields */
+}
+
+.login .button, .registration .button {
+    background-color: #333;
+    color: #fff;
+    padding: 12px 24px; /* Increase padding for the button */
+    border: none;
+    cursor: pointer;
+    border-radius: 10px; /* Increase border radius for the button */
+    font-size: 18px; /* Increase font size for the button */
+}
+
+.login .button:hover, .registration .button:hover {
+    background-color: #555;
+}
+
+/* CSS for schedule_appointment.html */
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.schedule_appointment-box {
+    max-width: 800px; /* Increase the maximum width */
+    margin: 20px auto; /* Add margin to center the box */
+    background-color: #fff; /* Change background color to white */
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.3); /* Add a larger shadow */
+    border-radius: 15px; /* Maintain border radius */
+    padding: 20px; /* Adjust padding for spacing */
+    text-align: center;
+    position: relative; /* Create a positioning context */
+
+    /* Additional styling */
+    font-family: Arial, sans-serif; /* Set font family */
+}
+form {
+    text-align: center;
+}
+
+.form-group {
+    margin: 10px 0;
+    text-align: left;
+}
+
+label, select {
+    font-size: 16px;
+    margin: 10px;
+}
+
+button {
+    background-color: #333;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+    border-radius: 5px;
+}
+
+button:hover {
+    background-color: #555;
+}
+
+@media (max-width: 768px) {
+    .container {
+        padding: 10px; /* Adjust padding for smaller screens */
+    }
+
+    label, select {
+        font-size: 14px; /* Adjust font size for smaller screens */
+    }
+
+    button {
+        font-size: 14px; /* Adjust font size for smaller screens */
+    }
+}
+
+/* CSS for confirm_appointment.html */
+.confirm-appointment-box {
+    max-width: 800px; /* Increase the maximum width */
+    margin: 20px auto; /* Add margin to center the box */
+    background-color: #fff; /* Change background color to white */
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.3); /* Add a larger shadow */
+    border-radius: 15px; /* Maintain border radius */
+    padding: 20px; /* Adjust padding for spacing */
+    text-align: center;
+    position: relative; /* Create a positioning context */
+
+    /* Additional styling */
+    font-family: Arial, sans-serif; /* Set font family */
+}
+
+.confirm-appointment-box h1 {
+    font-size: 28px;
+    margin-bottom: 20px;
+}
+
+.confirm-appointment-box ul {
+    list-style: none; /* Updated property name */
+    padding: 0;
+}
+
+.confirm-appointment-box li {
+    font-size: 18px;
+    margin: 10px 0;
+}
+
+.confirm-appointment-box form {
+    margin-top: 20px;
+}
+
+.confirm-appointment-box input[type="submit"] {
+    background-color: #007bff;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 10px;
+    font-size: 18px;
+    cursor: pointer;
+}
+
+.confirm-appointment-box input[type="submit"]:hover {
+    background-color: #0056b3;
+}
+
+.confirm-appointment-box a.btn-secondary {
+    background-color: #666;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 10px;
+    font-size: 18px;
+    text-decoration: none;
+    display: inline-block;
+    margin-top: 20px;
+    display: block; /* Make it a block element to fit the width of the box */
+    text-align: center; /* Center-align the link text */
+}
+
+.confirm-appointment-box a.btn-secondary:hover {
+    background-color: #444;
+}
+
+/* CSS for profile.html */
+.profile {
+    max-width: 600px; /* Increase the maximum width */
+    margin: 0 auto;
+    background-color: #fff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Make the shadow slightly stronger */
+    border-radius: 15px; /* Increase the border radius for rounded corners */
+    padding: 30px; /* Increase padding for more space */
+    text-align: center;
+}
+
+.profile h1 {
+    font-size: 28px; /* Increase the font size for the heading */
+}
+
+.profile p {
+    font-size: 18px; /* Increase font size for the text */
+    margin: 10px 0;
+}
+
+/* CSS for product_list.html */
+.products {
+    text-align: center;
+    padding: 20px;
+}
+
+.product-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.product {
+    margin: 20px;
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    text-align: center;
+    background-color: #f9f9f9;
+    width: 300px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.product img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px;
+}
+
+.product h3 {
+    font-size: 20px;
+    margin: 10px 0;
+}
+
+.product p {
+    font-size: 16px;
+    margin: 10px 0;
+}
+
+.product label {
+    font-size: 16px;
+}
+
+.product input[type="number"] {
+    width: 60px;
+    font-size: 16px;
+}
+
+.product button {
+    background-color: #007BFF;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+    border-radius: 5px;
+}
+
+.product button:hover {
+    background-color: #0056b3;
+}
+
+/* Media query for smaller screens */
+@media (max-width: 768px) {
+    .product {
+        width: 100%;
+    }
+}
+/* CSS for cart.html */
+.cart {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #f8f8f8;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.cart h1 {
+    font-size: 24px;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+.cart-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    margin: 10px 0;
+    padding: 10px;
+    background-color: #fff;
+}
+
+.cart-item img {
+    max-width: 100px;
+    height: auto;
+    margin-right: 20px;
+}
+
+.cart-item-details {
+    flex: 1;
+}
+
+.cart-item-details h2 {
+    font-size: 18px;
+    margin: 0;
+}
+
+.cart-item-details p {
+    margin: 0;
+    color: #777;
+}
+
+.cart-item-quantity {
+    display: flex;
+    align-items: center;
+}
+
+.cart-item-quantity label {
+    margin-right: 10px;
+}
+
+.cart-item-quantity input {
+    width: 40px;
+    padding: 5px;
+    border: 1px solid #ddd;
+    border-radius: 3px;
+}
+
+.cart-item-total {
+    font-size: 18px;
+}
+
+.cart-total {
+    margin-top: 20px;
+    text-align: right;
+}
+
+.cart-total span {
+    font-weight: bold;
+    font-size: 20px;
+    color: #333;
+}
+
+.cart-buttons {
+    margin-top: 20px;
+    text-align: right;
+}
+
+.cart-buttons a {
+    text-decoration: none;
+    padding: 10px 20px;
+    background-color: #333;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.cart-buttons a:hover {
+    background-color: #555;
+}
